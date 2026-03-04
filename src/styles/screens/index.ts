@@ -3,6 +3,7 @@
 import { colores, tipografia } from '@/styles';
 import { StyleSheet } from 'react-native';
 
+
 export function crearEstilos(c: typeof colores.dark) {
   return StyleSheet.create({
     container: {
@@ -13,8 +14,12 @@ export function crearEstilos(c: typeof colores.dark) {
     },
     texto: {
       fontFamily: tipografia.fuentes.titulo,
-      fontSize: tipografia.sizes.xxl,
+      fontSize: tipografia.sizes.lg,
       color: c.texto,
     },
+    contTexto:{                  
+      flex: 1, 
+      backgroundColor: c.fondo,      
+    }
   });
 }

@@ -14,7 +14,7 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -40,10 +40,14 @@ export default function RootLayout() {
   if (!fontsCargadas) return null;
 
   return (
-    <TemaProvider>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-      </Stack>
-    </TemaProvider>
+    <SafeAreaProvider>
+      <TemaProvider>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="contacto" options={{ headerShown: false }} />
+          <Stack.Screen name="colecciones" options={{ headerShown: false }} />
+        </Stack>
+      </TemaProvider>
+    </SafeAreaProvider>
   );
 }

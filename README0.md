@@ -70,6 +70,6 @@ https://github.com/miguelbrown78/react-native-bw-0
 git add .
 git commit -m "init: proyecto base con hola mundo"
 git branch -M main
-git remote add origin https://github.com/miguelbrown78/react-native-bw-0.git
+git remote add origin https://github.com/miguelbrown78/react-native-bw-1.git
 git push -u origin main
 ```
